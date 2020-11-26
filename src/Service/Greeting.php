@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Service;
+
+use Psr\Log\LoggerInterface;
+
+class Greeting {
+
+    public function __construct(LoggerInterface $logger) {
+        $this->logger = $logger;
+    }
+
+    public function greet(string $name) {
+        $this->logger->info("Greeted $name");
+        return "Hello $name";
+    }
+
+}
