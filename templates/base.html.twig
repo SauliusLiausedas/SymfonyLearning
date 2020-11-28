@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('style') }}
+    {% endblock %}
+</head>
+<body class="bg-light">
+<main role="main" class="container">
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
         {% block body %}
-            {{ message }}
+        
         {% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+        <small class="d-block text-right mt-3">
+            <a href="#">All updates</a>
+        </small>
+    </div>
+</main>
+{% block javascripts %}
+    {{ encore_entry_script_tags('app') }}
+{% endblock %}
+</body>
 </html>
