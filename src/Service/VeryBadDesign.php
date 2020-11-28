@@ -2,16 +2,16 @@
 
 namespace App\Service;
 
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\DependencyInjection\ContainerInterface;
+//use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+//use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class VeryBadDesign implements ContainerAwareInterface
+class VeryBadDesign
 {
     /**
      * @required
      */
-    public function setContainer(ContainerInterface $container = null)
+    public function setContainer()
     {
-        $container->get(Greetings::class);
+        return false;
     }
 }

@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <small class="d-block text-right mt-3">
+        <a href="{{ path('micro_post_edit', { id: post.id }) }}">Edit post</a>
+    </small>
+    {{ include('micro_post/raw-post.html.twig') }}
+{% endblock %}
