@@ -10,8 +10,6 @@
 // the bootstrap module doesn't export/return anything
 import 'bootstrap';
 import 'holderjs';
+import './js/likes';
 // import 'bootstrap/js/dist/util';
 // import 'bootstrap/js/dist/dropdown';
-
-
-console.log('Hello Webpack Encore! Edit me in assets/app.js');

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {{ form_start(reg_form) }}
+
+    {{ form_widget(reg_form) }}
+
+    {{ form_end(reg_form) }}
+{% endblock %}

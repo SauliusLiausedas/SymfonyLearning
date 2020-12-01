@@ -5,4 +5,13 @@
         <a href="{{ path('micro_post_edit', { id: post.id }) }}">Edit post</a>
     </small>
     {{ include('micro_post/raw-post.html.twig') }}
+    {% set isLiked = post.getLikedby.contains(app.user) %}
+    <div class="pt2 mt-2">
+        <button data-like="1" data-id="{{ post.id }}" class="btn btn-outline-secondary btn-sm likingBtn" style="display: {% if not isLiked %}block{% else %}none{% endif %}">
+            Like <span class="badge badge-light">{{ post.getLikedBy.count }}</span>
+        </button>
+        <button data-like="0" data-id="{{ post.id }}" class="btn btn-outline-secondary btn-sm likingBtn" style="display: {% if isLiked %}block{% else %}none{% endif %}">
+            Unlike <span class="badge badge-light">{{ post.getLikedBy.count }}</span>
+        </button>
+    </div>
 {% endblock %}

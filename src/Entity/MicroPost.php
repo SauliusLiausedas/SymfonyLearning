@@ -3,11 +3,14 @@
 namespace App\Entity;
 
 use App\Repository\MicroPostRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=MicroPostRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class MicroPost
 {
@@ -29,6 +32,30 @@ class MicroPost
      * @ORM\Column(type="datetime")
      */
     private $time;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, inversedBy="postsLiked")
+     * @ORM\JoinTable(name="post_likes",
+     *     joinColumns={@ORM\JoinColumn(name="post_id", referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")}
+     * )
+     */
+    private $likedBy;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="microPosts")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $user;
+    /**
+     * @var ArrayCollection
+     */
+
+
+    public function __construct()
+    {
+        $this->likedBy = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -57,5 +84,42 @@ class MicroPost
         $this->time = $time;
 
         return $this;
+    }
+
+    /**
+     * @ORM\PrePersist()
+     */
+    public function setTimeOnPersist()
+    {
+        $this->time = new \DateTime();
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): self
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getLikedBy(): Collection
+    {
+        return $this->likedBy;
+    }
+
+    public function like(User $user)
+    {
+        if ($this->likedBy->contains($user)) {
+            return;
+        } else {
+            $this->likedBy->add($user);
+        }
     }
 }

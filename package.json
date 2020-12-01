@@ -19,6 +19,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "axios": "^0.21.0",
         "holderjs": "^2.9.7"
     }
 }
