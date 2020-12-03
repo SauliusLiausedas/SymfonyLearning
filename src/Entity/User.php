@@ -271,6 +271,59 @@ class User implements UserInterface, \Serializable
         return $this->postsLiked;
     }
 
+    public function addFollower(User $follower): self
+    {
+        if (!$this->followers->contains($follower)) {
+            $this->followers[] = $follower;
+            $follower->addFollowing($this);
+        }
+
+        return $this;
+    }
+
+    public function removeFollower(User $follower): self
+    {
+        if ($this->followers->removeElement($follower)) {
+            $follower->removeFollowing($this);
+        }
+
+        return $this;
+    }
+
+    public function addFollowing(User $following): self
+    {
+        if (!$this->following->contains($following)) {
+            $this->following[] = $following;
+        }
+
+        return $this;
+    }
+
+    public function removeFollowing(User $following): self
+    {
+        $this->following->removeElement($following);
+
+        return $this;
+    }
+
+    public function addPostsLiked(MicroPost $postsLiked): self
+    {
+        if (!$this->postsLiked->contains($postsLiked)) {
+            $this->postsLiked[] = $postsLiked;
+            $postsLiked->addLikedBy($this);
+        }
+
+        return $this;
+    }
+
+    public function removePostsLiked(MicroPost $postsLiked): self
+    {
+        if ($this->postsLiked->removeElement($postsLiked)) {
+            $postsLiked->removeLikedBy($this);
+        }
+
+        return $this;
+    }
 
 
 }

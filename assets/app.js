@@ -11,5 +11,6 @@
 import 'bootstrap';
 import 'holderjs';
 import './js/likes';
+import './js/notifications';
 // import 'bootstrap/js/dist/util';
 // import 'bootstrap/js/dist/dropdown';

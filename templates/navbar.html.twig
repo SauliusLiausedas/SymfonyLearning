@@ -4,6 +4,13 @@
     <div class="w-100 order-1 order-md-0">
         <ul class="navbar-nav px-3">
             {% if is_granted('ROLE_USER') %}
+                <li class="nav-item text-nowrap border-right border-secondary">
+                    <a href="" class="nav-link">
+                        Notifications <span class="badge badge-light" id="notification-count">
+                            <i class="fa fa-circle fa-circle-o-notch fa-spin"></i>
+                        </span>
+                    </a>
+                </li>
                 <li class="nav-item text-nowrap">
                     <a class="nav-link" href="{{ path('micro_post_add') }}">Add new</a>
                 </li>
