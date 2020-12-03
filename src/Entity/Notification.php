@@ -23,7 +23,7 @@ abstract class Notification
     private $id;
 
     /**
-     * @ORM\ManyToMany(targetEntity=User::class)
+     * @ORM\ManyToOne(targetEntity=User::class)
      */
     private $user;
 
@@ -35,7 +35,6 @@ abstract class Notification
     public function __construct()
     {
         $this->seen = false;
-        $this->user = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -44,20 +43,19 @@ abstract class Notification
     }
 
     /**
-     * @return Collection|User[]
+     * @return mixed
      */
-    public function getUser(): Collection
+    public function getUser()
     {
         return $this->user;
     }
 
-    public function addUser(User $user): self
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user): void
     {
-        if (!$this->user->contains($user)) {
-            $this->user[] = $user;
-        }
-
-        return $this;
+        $this->user = $user;
     }
 
     public function removeUser(User $user): self

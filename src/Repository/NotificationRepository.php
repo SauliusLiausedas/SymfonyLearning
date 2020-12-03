@@ -22,49 +22,30 @@ class NotificationRepository extends ServiceEntityRepository
 
     public function findUnseenByUser(User $user)
     {
-
         $qb = $this->createQueryBuilder('n');
 
-        dd($qb->select('n')
-            ->getQuery()
-            ->getSQL()
-        );
+        return $qb->select('count(n)')
+            ->where('n.user = :user')
+            ->andWhere('n.seen = 0')
 
-//        dd($qb->select('count(n)')
-//            ->where('n != :user')
-//            ->andWhere('n.seen = 0')
-//            ->setParameter('user', $user)
-//            ->getQuery()
-//            ->getSingleScalarResult()
-//        );
+            ->setParameter('user', $user)
+            ->getQuery()
+            ->getSingleScalarResult();
     }
 
-    // /**
-    //  * @return Notification[] Returns an array of Notification objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    /**
+     * @param User $user
+     * @return int|mixed|string
+     */
+    public function markAllAsReadByUser(User $user)
     {
-        return $this->createQueryBuilder('n')
-            ->andWhere('n.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('n.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $qb = $this->createQueryBuilder('n');
 
-    /*
-    public function findOneBySomeField($value): ?Notification
-    {
-        return $this->createQueryBuilder('n')
-            ->andWhere('n.exampleField = :val')
-            ->setParameter('val', $value)
+        $qb->update(Notification::class, 'n')
+            ->set('n.seen', true)
+            ->where('n.user = :user')
+            ->setParameter('user', $user)
             ->getQuery()
-            ->getOneOrNullResult()
-        ;
+            ->execute();
     }
-    */
 }

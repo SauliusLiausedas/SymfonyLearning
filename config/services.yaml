@@ -42,6 +42,10 @@ services:
         alias: App\Service\Greeting
         public: true
 
+    App\EventListener\LikeNotificationSubscriber:
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }
+
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

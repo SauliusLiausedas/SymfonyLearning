@@ -7,7 +7,13 @@ $(function() {
 
 function fetchNotificationCount() {
     const url = '/notification/unread-count'
-    axios.get(url).then((res) => $('#notification-count').text(res))
+    axios.get(url).then((res) => {
+        const { count } = res.data;
+        $('#notification-count').text(count)
+        setTimeout(() => {
+            fetchNotificationCount()
+        }, 5000)
+    })
         .catch(err => {
             console.log(err)
         })
