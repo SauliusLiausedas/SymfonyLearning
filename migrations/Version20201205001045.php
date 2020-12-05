@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20201129170211 extends AbstractMigration
+final class Version20201205001045 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -20,12 +20,12 @@ final class Version20201129170211 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE micro_post CHANGE user_id user_id INT NOT NULL');
+        $this->addSql('ALTER TABLE user ADD confirmation_token VARCHAR(30) DEFAULT NULL, ADD enabled TINYINT(1) NOT NULL');
     }
 
     public function down(Schema $schema) : void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE micro_post CHANGE user_id user_id INT DEFAULT NULL');
+        $this->addSql('ALTER TABLE user DROP confirmation_token, DROP enabled');
     }
 }
