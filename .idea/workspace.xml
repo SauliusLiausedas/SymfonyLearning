@@ -23,15 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4697d376-bbf3-44b1-a167-861876da2674" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Event/LocalSubscriber.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Mailer/MailerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Security/TokenGeneratorTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,14 +151,19 @@
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/bin/.phpunit" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kw1oAT1jX9oOSBQPUHxdj2tx09" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -185,7 +188,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606597014490</updated>
       <workItem from="1606597017165" duration="33618000" />
-      <workItem from="1607189933630" duration="9109000" />
+      <workItem from="1607189933630" duration="12821000" />
     </task>
     <task id="LOCAL-00001" summary="Translations">
       <created>1607192930492</created>
@@ -194,7 +197,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607192930492</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Translations&#10;User session">
+      <created>1607199722876</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607199722876</updated>
+    </task>
+    <task id="LOCAL-00003" summary="New files for last lecture">
+      <created>1607199821222</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607199821222</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -219,8 +236,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Translations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Translations" />
+    <MESSAGE value="Translations&#10;User session" />
+    <MESSAGE value="New files for last lecture" />
+    <option name="LAST_COMMIT_MESSAGE" value="New files for last lecture" />
   </component>
   <component name="WindowStateProjectService">
     <state x="547" y="232" key="#Notifications" timestamp="1606660247200">
@@ -243,10 +263,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="489" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1607199273270" />
-    <state x="473" y="121" key="NewPhpClassDialog" timestamp="1607199274892">
+    <state width="0" height="0" key="GridCell.Tab.0.bottom" timestamp="1607200438469">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="473" y="121" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1607199274892" />
+    <state width="0" height="0" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607200438469" />
+    <state width="0" height="0" key="GridCell.Tab.0.center" timestamp="1607200438468">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607200438468" />
+    <state width="0" height="0" key="GridCell.Tab.0.left" timestamp="1607200438468">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607200438468" />
+    <state width="0" height="0" key="GridCell.Tab.0.right" timestamp="1607200438469">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="0" height="0" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607200438469" />
+    <state x="473" y="121" key="NewPhpClassDialog" timestamp="1607201315200">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="473" y="121" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1607201315200" />
     <state x="608" y="332" key="NewPhpFileDialog" timestamp="1607197666995">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -255,10 +291,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606676830498" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1607192937050">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1607199838403">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607192937050" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607199838403" />
     <state x="450" y="207" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1606680165144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -271,9 +307,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607190756643" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607198602058">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607202367677">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607198602058" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607202367677" />
   </component>
 </project>
