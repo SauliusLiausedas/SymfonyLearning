@@ -23,18 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4697d376-bbf3-44b1-a167-861876da2674" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/translations/messages.en.xlf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/messages.fr.xlf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/validators.en.xlf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/translations/validators.fr.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Event/LocalSubscriber.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/emails/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/emails/registration.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/micro_post/user-posts.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/micro_post/user-posts.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +163,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
@@ -187,8 +185,16 @@
       <option name="presentableId" value="Default" />
       <updated>1606597014490</updated>
       <workItem from="1606597017165" duration="33618000" />
-      <workItem from="1607189933630" duration="2259000" />
+      <workItem from="1607189933630" duration="9109000" />
     </task>
+    <task id="LOCAL-00001" summary="Translations">
+      <created>1607192930492</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607192930492</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -212,11 +218,19 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Translations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Translations" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="547" y="232" key="#Notifications" timestamp="1606660247200">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="547" y="232" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1606660247200" />
+    <state x="172" y="249" key="#SQL_Dialects" timestamp="1607195267583">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="172" y="249" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1607195267583" />
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606655241704">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -225,29 +239,41 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="81" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1606597772229" />
-    <state x="473" y="121" key="NewPhpClassDialog" timestamp="1606659553039">
+    <state x="489" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1607199273270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="473" y="121" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1606659553039" />
+    <state x="489" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1607199273270" />
+    <state x="473" y="121" key="NewPhpClassDialog" timestamp="1607199274892">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="473" y="121" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1607199274892" />
+    <state x="608" y="332" key="NewPhpFileDialog" timestamp="1607197666995">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="608" y="332" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1607197666995" />
     <state x="277" y="58" key="SettingsEditor" timestamp="1606676830498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606676830498" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1607192937050">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607192937050" />
     <state x="450" y="207" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1606680165144">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="450" y="207" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1606680165144" />
-    <state x="482" y="136" width="571" height="552" key="find.popup" timestamp="1606668808261">
+    <state x="482" y="136" width="571" height="552" key="find.popup" timestamp="1607195561585">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="482" y="136" width="571" height="552" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606668808261" />
+    <state x="482" y="136" width="571" height="552" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1607195561585" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1607190756643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607190756643" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607191640936">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607198602058">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607191640936" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607198602058" />
   </component>
 </project>

@@ -103,6 +103,11 @@ use Symfony\Component\Validator\Constraints as Assert;
      */
     private $enabled;
 
+    /**
+     * @ORM\OneToOne(targetEntity=UserPreferences::class, cascade={"persist"})
+     */
+    private $userPreferences;
+
     public function __construct()
     {
         $this->microPosts = new ArrayCollection();
@@ -369,5 +374,21 @@ use Symfony\Component\Validator\Constraints as Assert;
         $this->enabled = $enabled;
     }
 
+        /**
+         * @return UserPreferences|null
+         */
+        public function getUserPreferences()
+        {
+            return $this->userPreferences;
+        }
 
-}
+        /**
+         * @param mixed $userPreferences
+         */
+        public function setUserPreferences($userPreferences): void
+        {
+            $this->userPreferences = $userPreferences;
+        }
+
+
+    }

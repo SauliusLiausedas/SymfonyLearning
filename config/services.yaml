@@ -5,7 +5,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     hello_message: 'Hello from service'
-    locale: 'lt'
+    locale: 'en'
     email_from: '%env(MAILER_FROM)%'
 
 services:
@@ -51,6 +51,21 @@ services:
         tags:
             - { name: doctrine.event_subscriber, connection: default }
 
+    Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler:
+        arguments:
+#            - !service { class: PDO, factory: 'database_connection:getWrappedConnection' } OLDER VERSION
+            - !service { class: PDO, factory: ['@database_connection','getWrappedConnection'] }
+            - { lock_mode: 1 }
 
+    #            - 'mysql:dbname=session_db'
+#            - { db_username: user, db_password: password }
+
+    App\Event\LocalSubscriber:
+        arguments:
+            - ['%kernel.default_locale% ']
+
+    App\Event\UserSubscriber:
+        arguments:
+            $defaultLocale: '%kernel.default_locale%'
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
