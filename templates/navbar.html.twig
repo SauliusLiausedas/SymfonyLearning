@@ -11,11 +11,11 @@
                         </span>
                     </a>
                     <a href="{{ path('notification_all') }}" class="nav-link d-inline-block">
-                        Notifications
+                        {{ 'Notifications'|trans }}
                     </a>
                 </li>
                 <li class="nav-item text-nowrap">
-                    <a class="nav-link" href="{{ path('micro_post_add') }}">Add new</a>
+                    <a class="nav-link" href="{{ path('micro_post_add') }}">{{ 'Add new'|trans }}</a>
                 </li>
             {% endif %}
         </ul>
@@ -30,12 +30,12 @@
                 </li>
                 <li class="nav-item text-nowrap">
                     <a class="nav-link"
-                       href="{{ path('security_logout') }}">Sign out</a>
+                       href="{{ path('security_logout') }}">{{ 'Sign out'|trans() }}</a>
                 </li>
             {% else %}
                 <li class="nav-item text-nowrap">
                     <a class="nav-link"
-                       href="{{ path('security_login') }}">Sign in</a>
+                       href="{{ path('security_login') }}">{{ 'Sign in'|trans() }}</a>
                 </li>
             {% endif %}
         </ul>

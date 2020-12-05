@@ -23,24 +23,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4697d376-bbf3-44b1-a167-861876da2674" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MicroPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MicroPostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/MicroPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/MicroPost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/ExampleVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/ExampleVoter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/micro_post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/micro_post/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/micro_post/raw-post.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/micro_post/raw-post.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/messages.en.xlf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/messages.fr.xlf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/validators.en.xlf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/translations/validators.fr.xlf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/emails/registration.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/emails/registration.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/micro_post/user-posts.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/micro_post/user-posts.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navbar.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -153,6 +154,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kw1oAT1jX9oOSBQPUHxdj2tx09" />
@@ -171,6 +174,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu-20.04\home\saulius\Projects\UdemySymfony\app\translations" />
       <recent name="\\wsl$\Ubuntu-20.04\home\saulius\Projects\UdemySymfony\app\templates\security" />
     </key>
   </component>
@@ -183,6 +187,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606597014490</updated>
       <workItem from="1606597017165" duration="33618000" />
+      <workItem from="1607189933630" duration="2259000" />
     </task>
     <servers />
   </component>
@@ -205,6 +210,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="547" y="232" key="#Notifications" timestamp="1606660247200">
@@ -235,13 +241,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="482" y="136" width="571" height="552" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606668808261" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1606680505171">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1607190756643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1606680505171" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1606683617172">
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1607190756643" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1607191640936">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1606683617172" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607191640936" />
   </component>
 </project>
